@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+        <img src="/static/icons/logo.png" id="logo" /> KOKKO
+        </div>
+        
+        <a href ="/news/digest" style="text-decoration: none;">
+        <div class="fact-box">
+            <div class="fact-date">
+                <div class="date">25.10.2026</div>
+                <div class="finnish">Sunnuntai</div>
+                <div class="english">Sunday</div>
+            </div>
+        
+            <div class="fact-content">
+            <h2 style="margin-top:0;margin-bottom:0;">News Digest</h2>
+            Local news shortly and translated.
+            </div>
+        </div>
+        </a>
+
+        <a href ="/news/digest" style="text-decoration: none;">
+        <div class="fact-box" style="background-color: #6D8196;">
+            <div class="fact-date">
+                <div class="date">24.10.2026</div>
+                <div class="finnish">Lauantai</div>
+                <div class="english">Saturday</div>
+            </div>
+        
+            <div class="fact-content">
+            <h2 style="margin-top:0;margin-bottom:0;">News Digest</h2>
+            Local news shortly and translated.
+            </div>
+        </div>
+        </a>
+
+    <h1> Local News Feed </h1>
+    {% for article in articles %}
+        <article class="news-item">
+            <h3 style="margin-bottom:0;">
+                <a href="{{ article.link }}">{{ article.title }}</a>
+            </h3>
+
+            <div class="date" style="font-size:9px;">
+                {{ article.published }}
+            </div>
+
+            <div class="summary">
+                {{ article.summary | safe }}
+            </div>
+        </article>
+    {% endfor %}
+
+    </div>
+
+    <nav class="navbar">
+        <a class="nav-btn" href="/" ><img src="/static/icons/home.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/news" ><img src="/static/icons/paper.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/cam" ><img src="/static/icons/camera.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/surv" ><img src="/static/icons/facts.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="#" ><img src="/static/icons/settings.png" class="nav_icon" /></a>
+    </nav>
+</body>

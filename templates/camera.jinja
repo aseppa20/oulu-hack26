@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="image-container">
+    <img src="/static/polliisi.jpg" />
+
+    <a href="/cam/results" class="image-button">⚪</a>
+</div>
+    <nav class="navbar">
+        <a class="nav-btn" href="/" ><img src="/static/icons/home.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/news" ><img src="/static/icons/paper.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/cam" ><img src="/static/icons/camera.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="/surv" ><img src="/static/icons/facts.png" class="nav_icon" /></a>
+        <a class="nav-btn" href="#" ><img src="/static/icons/settings.png" class="nav_icon" /></a>
+    </nav>
+</body>
+
+<style>
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-button {
+    position: absolute;
+    bottom: 80px;
+    right: 180px;
+
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+}
+
+.image-button:hover {
+    background: #f0f0f0;
+}
+</style>
